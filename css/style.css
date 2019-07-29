@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  background-color: lightblue;
+}
+h1 {
+  color: white;
+  font-size: 30px;
+}
+form {
+  margin: auto;
+  border: 5px solid black;
+  width: 500px;
+  height: 250px;
+}
