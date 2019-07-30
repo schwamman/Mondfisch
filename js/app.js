@@ -49,3 +49,20 @@ function clearSketchpad() {
   var sketchpad = document.getElementById('sketchpad');
   sketchpad.parentNode.removeChild(sketchpad);
 }
+
+renderStaticImage() {
+  //Creates canvas element to display image
+  var imageLocation = document.getElementById('previousRound');
+  var staticImage = document.createElement('canvas');
+  staticImage.setAttribute('id', 'staticImage');
+  imageLocation.appendChild(staticImage);
+
+  if (staticImage.getContext) {
+    var context = staticImage.getContext('2d');
+  }
+
+  var dataURL = localStorage.getItem('sketch' + roundCount);
+  var img = new Image();
+  img.src = dataURL;
+  context.drawImage(img, 0, 0);
+}
