@@ -46,11 +46,13 @@ function saveDrawing() {
 }
 
 function clearSketchpad() {
-  var sketchpad = document.getElementById('sketchpad');
-  sketchpad.parentNode.removeChild(sketchpad);
+  var sketchpadLocation = document.getElementById('currentRound');
+  while(sketchpadLocation.hasChildNodes()) {
+    sketchpadLocation.removeChild(sketchpadLocation.firstChild);
+  }
 }
 
-renderStaticImage() {
+function renderStaticImage() {
   //Creates canvas element to display image
   var imageLocation = document.getElementById('previousRound');
   var staticImage = document.createElement('canvas');
@@ -65,4 +67,16 @@ renderStaticImage() {
   var img = new Image();
   img.src = dataURL;
   context.drawImage(img, 0, 0);
+}
+
+function clearForm() {
+  var imageLocation = document.getElementById('previousRound');
+  while(imageLocation.hasChildNodes()) {
+    imageLocation.removeChild(imageLocation.firstChild);
+  }
+
+  var formLocation = document.getElementById('currentRound');
+  while(formLocation.hasChildNodes()) {
+    formLocation.removeChild(formLocation.firstChild);
+  }
 }
