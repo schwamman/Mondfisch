@@ -59,12 +59,11 @@ function endButton() {
 function renderTextForm() {
   var form = document.createElement('form');
   form.setAttribute("type", "text");
+  form.id='phraseInput';
   var input = document.createElement('input');
   form.appendChild(input);
   var formLocation = document.getElementById("currentRound");
   formLocation.appendChild(form);
-  
-  
 }
 
 function saveForm() {
