@@ -5,3 +5,8 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
+canvas {
+  background-color: rgba(255, 255, 255, 0.68);
+
+}

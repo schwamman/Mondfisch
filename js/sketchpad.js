@@ -2,9 +2,12 @@
 
 var sketchpad = document.getElementById('sketchpad');
 
-if (sketchpad.getContext) {
-  var context = sketchpad.getContext('2d');
-}
+// if (sketchpad.getContext) {
+//   var context = sketchpad.getContext('2d');
+// }
+// sketchpad.addEventListener('mousedown', mouseDown, false);
+// sketchpad.addEventListener('mousemove', mouseMoves, false);
+// window.addEventListener('mouseup', mouseUp, false);
 
 function draw(context, x, y, size) {
   var r = 0;
@@ -68,18 +71,7 @@ function loadsketchpad() {
   context.drawImage(img, 0, 0);
 }
 
-var loadButton = document.getElementById('load');
-var saveButton = document.getElementById('save');
-var clearButton = document.getElementById('clear');
-loadButton.addEventListener('click', loadsketchpad);
-saveButton.addEventListener('click', savesketchpad);
-clearButton.addEventListener('click', function() {
-  clearsketchpad(sketchpad, context);
-});
 
-sketchpad.addEventListener('mousedown', mouseDown, false);
-sketchpad.addEventListener('mousemove', mouseMoves, false);
-window.addEventListener('mouseup', mouseUp, false);
 
 
 
