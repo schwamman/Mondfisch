@@ -40,3 +40,7 @@ function saveForm() {
   localStorage.setItem('formPhrase' + roundCount, userInput);
 }
 
+function saveDrawing() {
+  var userSketch = document.getElementById('sketchpad');
+  localStorage.setItem('sketch' + roundCount, userSketch.toDataURL());
+}
