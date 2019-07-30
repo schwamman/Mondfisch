@@ -53,15 +53,15 @@ function getMousePosition(e) {
   }
 }
 
-function clearSketchpad(sketchpad, context) {
+function clearsketchpad(sketchpad, context) {
   context.clearRect(0, 0, sketchpad.width, sketchpad.height);
 }
 
-function saveSketchpad() {
+function savesketchpad() {
   localStorage.setItem('sketch1', sketchpad.toDataURL());
 }
 
-function loadSketchpad() {
+function loadsketchpad() {
   var dataURL = localStorage.getItem('sketch1');
   var img = new Image();
   img.src = dataURL;
@@ -71,10 +71,10 @@ function loadSketchpad() {
 var loadButton = document.getElementById('load');
 var saveButton = document.getElementById('save');
 var clearButton = document.getElementById('clear');
-loadButton.addEventListener('click', loadSketchpad);
-saveButton.addEventListener('click', saveSketchpad);
+loadButton.addEventListener('click', loadsketchpad);
+saveButton.addEventListener('click', savesketchpad);
 clearButton.addEventListener('click', function() {
-  clearSketchpad(sketchpad, context);
+  clearsketchpad(sketchpad, context);
 });
 
 sketchpad.addEventListener('mousedown', mouseDown, false);
