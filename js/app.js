@@ -62,5 +62,7 @@ function renderNextSketchButton() {
   //set attribute id='nextBtn'
   btn.setAttribute('nextBtn');
   //add event listener to call generateSketchPadPage() when clicked
+  document.getElementById('nextBtn').addEventListener("click", generateSketchPadPage());
   //append button to game.html
+  btn.appendChild(nextBtn);
 }
