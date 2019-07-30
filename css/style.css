@@ -2,9 +2,43 @@ body {
 	text-align: center;
 	background-color: lightblue;
 }
-h1 {
+
+header.fish {
+	background: rgba(8, 46, 89, 0.9);
+	border-radius: 15px;
+	height: 130px;
+	margin: 10px auto;
+	padding: 20px;
+	position: relative;
+	width: 90%;
+	max-width: 1020px;
+}
+
+header.fish h1 {
+	line-height: 90%;
+	padding: 20px;
+	margin: auto;
+	position: absolute;
+	color: #fff;
+	left: 300px;
+	top: 20%;
+	width: 200px;
+	font-size: 75px;
+	font-family: 'Pacifico', cursive;
+}
+
+header.fish img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+header.fish #about{
+	float: right;
+	font-size: 35px;
 	color: white;
-	font-size: 30px;
 }
 
 form {
