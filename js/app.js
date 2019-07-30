@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 var roundCount = 0;
 
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
@@ -26,7 +26,7 @@ function generateSketchPadPage() {
   clearForm();
   renderTextPhrase();
   renderSketchpad();
-  renderNextFormBtn(); 
+  renderNextFormBtn();
 }
 
 function endGame() {
@@ -35,43 +35,51 @@ function endGame() {
   renderResults();
 }
 
-//next button 
+//next button
 function nextButton() {
-var nextButton = document.createElement("button");
-nextButton.textContent = "Next";
-nextButton.id ='nextBtn';
-var buttonsLocation = document.getElementById("buttons");
-buttonsLocation.appendChild(button);
-button.addEventListener ("click", generateTextFormPage);
+  var nextButton = document.createElement("button");
+  nextButton.textContent = "Next";
+  nextButton.id = "nextBtn";
+  var buttonsLocation = document.getElementById("buttons");
+  buttonsLocation.appendChild(button);
+  button.addEventListener("click", generateTextFormPage);
 }
 
-//end button 
+//end button
 function endButton() {
   var endButton = document.createElement("button");
   endButton.textContent = "End Game";
-  endButton.id ='endBtn';
+  endButton.id = "endBtn";
   var buttonsLocation = document.getElementById("buttons");
   buttonsLocation.appendChild(button);
-  button.addEventListener ("click", endGame);
-  }
+  button.addEventListener("click", endGame);
+}
 
-  //render text form
-  function renderTextForm() {
-    
-  }
-
+//render text form
+function renderTextForm() {
+  var form = document.createElement('form');
+  form.setAttribute("type", "text");
+  var input = document.createElement('input');
+  form.appendChild(input);
+  var formLocation = document.getElementById("currentRound");
+  formLocation.appendChild(form);
+  
+  
+}
 
 function saveForm() {
-  var userInput = document.getElementById('phraseInput').value;
-  localStorage.setItem('formPhrase' + roundCount, userInput);
+  var userInput = document.getElementById("phraseInput").value;
+  localStorage.setItem("formPhrase" + roundCount, userInput);
 }
 
 function saveDrawing() {
-  var userSketch = document.getElementById('sketchpad');
-  localStorage.setItem('sketch' + roundCount, userSketch.toDataURL());
+  var userSketch = document.getElementById("sketchpad");
+  localStorage.setItem("sketch" + roundCount, userSketch.toDataURL());
 }
 
 function clearSketchpad() {
-  var sketchpad = document.getElementById('sketchpad');
+  var sketchpad = document.getElementById("sketchpad");
   sketchpad.parentNode.removeChild(sketchpad);
 }
+
+renderTextForm();
