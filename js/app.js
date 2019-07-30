@@ -49,3 +49,12 @@ function clearSketchpad() {
   var sketchpad = document.getElementById('sketchpad');
   sketchpad.parentNode.removeChild(sketchpad);
 }
+
+function renderTextPhrase() {
+  //create element <p>
+  var printTextPhrase = document.createElement('p');
+  //set content to the phrase saved in localStorage ("formPhrase" + roundCount)
+  printTextPhrase.textContent = localStorage.setItem('formPhrase ' + roundCount);
+  //append element to game.html
+  printTextPhrase.appendChild(placeHolderID);
+}
