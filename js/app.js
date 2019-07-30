@@ -9,6 +9,17 @@ function startGame() {
   renderSketchpad();
   renderNextFormBtn();
 }
+//rendering the canvas pad
+function renderSketchpad() {
+	var canvas = document.createElement("canvas");
+	var div = document.getElementById("canvas");
+		canvas.setAttribute('id', 'sketchpad');
+		canvas.setAttribute('width', '500px');
+		canvas.setAttribute('height', '500px');
+		canvasSection.appendChild(canvas);
+}
+
+
 
 //Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form
 function generateTextFormPage() {
