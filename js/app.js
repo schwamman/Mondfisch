@@ -34,3 +34,16 @@ function endGame() {
   clearForm();
   renderResults();
 }
+
+//next button 
+// 1. Create the button
+var nextButton = document.createElement("button");
+nextButton.textContent = "Next";
+nextButton.id ='nextBtn';
+
+// 2. Append to game
+var bodyLocation = document.getElementById("gameBody");
+bodyLocation.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", generateTextFormPage);
