@@ -36,14 +36,42 @@ function endGame() {
 }
 
 //next button 
-// 1. Create the button
+function nextButton() {
 var nextButton = document.createElement("button");
 nextButton.textContent = "Next";
 nextButton.id ='nextBtn';
-
-// 2. Append to game
-var bodyLocation = document.getElementById("gameBody");
-bodyLocation.appendChild(button);
-
-// 3. Add event handler
+var buttonsLocation = document.getElementById("buttons");
+buttonsLocation.appendChild(button);
 button.addEventListener ("click", generateTextFormPage);
+}
+
+//end button 
+function endButton() {
+  var endButton = document.createElement("button");
+  endButton.textContent = "End Game";
+  endButton.id ='endBtn';
+  var buttonsLocation = document.getElementById("buttons");
+  buttonsLocation.appendChild(button);
+  button.addEventListener ("click", endGame);
+  }
+
+  //render text form
+  function renderTextForm() {
+    
+  }
+
+
+function saveForm() {
+  var userInput = document.getElementById('phraseInput').value;
+  localStorage.setItem('formPhrase' + roundCount, userInput);
+}
+
+function saveDrawing() {
+  var userSketch = document.getElementById('sketchpad');
+  localStorage.setItem('sketch' + roundCount, userSketch.toDataURL());
+}
+
+function clearSketchpad() {
+  var sketchpad = document.getElementById('sketchpad');
+  sketchpad.parentNode.removeChild(sketchpad);
+}
