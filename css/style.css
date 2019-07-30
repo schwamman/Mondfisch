@@ -20,7 +20,7 @@ header.fish h1 {
 	margin: auto;
 	position: absolute;
 	color: #fff;
-	left: 300px;
+	left: 325px;
 	top: 20%;
 	width: 200px;
 	font-size: 75px;
@@ -36,9 +36,11 @@ header.fish img {
 	top: 15px;
 }
 header.fish #about{
+	margin-top: 45px;
 	float: right;
 	font-size: 35px;
 	color: white;
+	margin-right: 45px;
 }
 
 form {
