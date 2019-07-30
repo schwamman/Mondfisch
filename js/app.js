@@ -81,4 +81,20 @@ function clearSketchpad() {
   sketchpad.parentNode.removeChild(sketchpad);
 }
 
-renderTextForm();
+
+function renderTextPhrase() {
+  var printTextPhrase = document.createElement('p');
+  printTextPhrase.textContent = localStorage.setItem('formPhrase ' + roundCount);
+  printTextPhrase.appendChild(placeHolderID);
+}
+
+function renderNextSketchButton() {
+  //Create button element
+  var btn = document.createElement('button');
+  //set attribute id='nextBtn'
+  btn.setAttribute('nextBtn');
+  //add event listener to call generateSketchPadPage() when clicked
+  document.getElementById('nextBtn').addEventListener("click", generateSketchPadPage());
+  //append button to game.html
+  btn.appendChild(nextBtn);
+}
