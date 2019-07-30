@@ -66,20 +66,13 @@ function clearSketchpad() {
 function renderStaticImage(count) {
   //Creates canvas element to display image
   var imageLocation = document.getElementById('previousRound');
-  var staticImage = document.createElement('canvas');
+  var staticImage = document.createElement('img');
   staticImage.setAttribute('id', 'staticImage');
-  
-
-  if (staticImage.getContext) {
-    var context = staticImage.getContext('2d');
-  }
+  staticImage.setAttribute('width', '500');
+  staticImage.setAttribute('height', '500');
 
   var dataURL = localStorage.getItem('sketch' + count);
-  console.log(count);
-  var img = new Image();
-  img.src = dataURL;
-  context.drawImage(img, 0, 0);
-  
+  staticImage.src = dataURL;
   imageLocation.appendChild(staticImage);
 }
 
