@@ -44,3 +44,8 @@ function saveDrawing() {
   var userSketch = document.getElementById('sketchpad');
   localStorage.setItem('sketch' + roundCount, userSketch.toDataURL());
 }
+
+function clearSketchpad() {
+  var sketchpad = document.getElementById('sketchpad');
+  sketchpad.parentNode.removeChild(sketchpad);
+}
