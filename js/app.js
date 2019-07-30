@@ -34,3 +34,18 @@ function endGame() {
   clearForm();
   renderResults();
 }
+
+function saveForm() {
+  var userInput = document.getElementById('phraseInput').value;
+  localStorage.setItem('formPhrase' + roundCount, userInput);
+}
+
+function saveDrawing() {
+  var userSketch = document.getElementById('sketchpad');
+  localStorage.setItem('sketch' + roundCount, userSketch.toDataURL());
+}
+
+function clearSketchpad() {
+  var sketchpad = document.getElementById('sketchpad');
+  sketchpad.parentNode.removeChild(sketchpad);
+}
