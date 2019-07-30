@@ -79,6 +79,7 @@ function renderStaticImage(count) {
   var img = new Image();
   img.src = dataURL;
   context.drawImage(img, 0, 0);
+  
   imageLocation.appendChild(staticImage);
 }
 
