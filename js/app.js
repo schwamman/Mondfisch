@@ -80,3 +80,52 @@ function clearForm() {
     formLocation.removeChild(formLocation.firstChild);
   }
 }
+
+//next button
+function nextButton() {
+  var nextButton = document.createElement("button");
+  nextButton.textContent = "Next";
+  nextButton.id = "nextBtn";
+  var buttonsLocation = document.getElementById("buttons");
+  buttonsLocation.appendChild(button);
+  button.addEventListener("click", generateTextFormPage);
+}
+
+//end button
+function endButton() {
+  var endButton = document.createElement("button");
+  endButton.textContent = "End Game";
+  endButton.id = "endBtn";
+  var buttonsLocation = document.getElementById("buttons");
+  buttonsLocation.appendChild(button);
+  button.addEventListener("click", endGame);
+}
+
+//render text form
+function renderTextForm() {
+  var form = document.createElement('form');
+  form.setAttribute("type", "text");
+  form.id='phraseInput';
+  var input = document.createElement('input');
+  form.appendChild(input);
+  var formLocation = document.getElementById("currentRound");
+  formLocation.appendChild(form);
+}
+
+
+function renderTextPhrase() {
+  var printTextPhrase = document.createElement('p');
+  printTextPhrase.textContent = localStorage.setItem('formPhrase ' + roundCount);
+  printTextPhrase.appendChild(placeHolderID);
+}
+
+function renderNextSketchButton() {
+  //Create button element
+  var btn = document.createElement('button');
+  //set attribute id='nextBtn'
+  btn.setAttribute('nextBtn');
+  //add event listener to call generateSketchPadPage() when clicked
+  document.getElementById('nextBtn').addEventListener("click", generateSketchPadPage());
+  //append button to game.html
+  btn.appendChild(nextBtn);
+}
