@@ -1,17 +1,36 @@
 'use strict';
 var roundCount = 0;
 
-
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
-saveForm();
-clearStartPage();
-renderSketchpad();
+//add event listener outside the function to run from form submit button (id="start) on index.html which starts game
+function startGame() {
+  saveForm();
+  renderTextPhrase();
+  renderSketchpad();
+  renderNextFormBtn();
+}
 
+//Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form
+function generateTextFormPage() {
+  saveDrawing();
+  clearSketchpad();
+  renderStaticImage();
+  renderTextForm();
+  renderNextSketchButton();
+  renderEndBtn();
+  roundcount++;
+}
 
-//Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form, start on another event button click once the user was done drawing
-saveDrawing();
-clearSketchPage();
-//-Need to increment roundCount
-renderTextForm();
+function generateSketchPadPage() {
+  saveForm();
+  clearForm();
+  renderTextPhrase();
+  renderSketchpad();
+  renderNextFormBtn(); 
+}
 
-//
+function endGame() {
+  saveForm();
+  clearForm();
+  renderResults();
+}
