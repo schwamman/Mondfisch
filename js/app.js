@@ -51,10 +51,16 @@ function clearSketchpad() {
 }
 
 function renderTextPhrase() {
-  //create element <p>
   var printTextPhrase = document.createElement('p');
-  //set content to the phrase saved in localStorage ("formPhrase" + roundCount)
   printTextPhrase.textContent = localStorage.setItem('formPhrase ' + roundCount);
-  //append element to game.html
   printTextPhrase.appendChild(placeHolderID);
+}
+
+function renderNextSketchButton() {
+  //Create button element
+  var btn = document.createElement('button');
+  //set attribute id='nextBtn'
+  btn.setAttribute('nextBtn');
+  //add event listener to call generateSketchPadPage() when clicked
+  //append button to game.html
 }
