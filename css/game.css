@@ -15,14 +15,14 @@ body {
 
 }
 
-header.fish {
+header{
 	background: #17223b;
 	border-radius: 15px;
 	height:auto;
 	min-height: 130px;
 	margin: 10px auto;
 	padding: 20px;
-	width: 90%;
+	width: 95%;
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
@@ -41,8 +41,9 @@ header.fish h1 {
 }
 
 form {
-  margin: auto;
+  float: right;
   display: block;
+
 }
 
 #leftDiv {
@@ -63,25 +64,29 @@ header.fish img {
 canvas {
   background-color: #1e1f26;
   }
+
+a {
+  text-decoration: none;
+}
   
 #sketchpad { 
   display: block;  
   border-radius: 20px;
-  margin: auto;
-  position:relative;
+  margin-left: 30px;
+  margin-top: 30px;
+  float: left;
   z-index: 100;
 }
 
 #previousRound {
 	background-color: #fff8f0;
-	width: 75%;
-	margin: auto;
-	height: auto;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	height: 500px;
   border-radius: 20px;
-  position:relative;
   z-index: 100;
+  float: left;
+  width: 25%;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 #previousRound h3 {
@@ -95,7 +100,7 @@ canvas {
 }
 
 #previousRound p {
-  padding: 15px 30px 30px 30px;
+  padding: 30px 30px 30px 30px;
   text-align: center;
   font-family: "Rocksalt", cursive;
   color: #ff6768;
@@ -104,12 +109,13 @@ canvas {
 
 #previousRoundSketch {
 	background-color: #1e1f26;
-	width: 75%;
-	margin: auto;
+	width: 50%;
+	margin-left: 30px;
 	height: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	border-radius: 20px;
+  border-radius: 20px;
+  float: left;
 }
 
 #staticImage {
@@ -123,21 +129,16 @@ canvas {
 
 #nextBtn{
   display: block;
-  float: right;
-  border-radius:35px;
-
-	height:70px;
-	width:70px;
+  border-radius: 70px;
+	height: 140px;
+	width: 140px;
 	background-color: #004a2f;
 	color:#fff8f0;
-	float:right;
-	margin-right: 20px;
-  margin-top: 15px;
   border: none;
-  transform:translateY(- 100px);
-  position:relative;
   z-index: 1;
-
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #currentRound {
@@ -147,45 +148,110 @@ canvas {
  margin: auto;
 }
 
-#clearDiv {
+.clearDiv {
   clear: both;
   margin: auto;
+  overflow:hidden;
+}
+
+.right-col {
+  float: right;
+  text-align: center;
+  width: 300px;
+  margin-right: 4%;
 }
 
 
 #phraseInput {
   display: block;
-  height: auto;
-	width: 80%;
+  width: 90%;
 	margin-top: 15px;
 	border-radius:25px;
-  margin: auto;
   padding: 30px;
   text-align: center;
   font-family: "Rocksalt", cursive;
   color: #ff6768;
-  font-size: 1.4rem
+  font-size: 1.4rem;
   z-index: 100;
-  position:relative;
+
 }
 
 #timer {
-  background-color: red;
+  background-color: #E3170A;
   font-style: bold;
   font-family: monospace;
-	font-size: 155px;
-	color:white;
+	font-size: 8rem;
+	color:#fff8f0;
   border-radius: 33px;
   padding: 15px 15px 15px 15px;
-  position:relative;
-  margin-left: 45%;
-  top: 90px;
+  display: block;
+  width: 50%;
   z-index: 100;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 45px;
+}
+
+#clearBtn {
+  display: block;
+  border-radius: 70px;
+	height: 140px;
+	width: 140px;
+  background-color: #c59e11;
+  margin-top: 30px;
+	color:#fff8f0;
+  border: none;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #endBtn {
-  z-index: 100;
-  position:relative;
+  display: block;
+  border-radius: 70px;
+	height: 140px;
+	width: 140px;
+	background-color: #473276;
+	color:#fff8f0;
+  border: none;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#currentText {
+  margin-top: 30px;
+  margin-right: 3%;
+}
+
+#endResults {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF8F0;
+  padding: 60px;
+  border-radius: 30px;
+}
+
+#endResults h3 {
+  padding-top: 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#endResults p {
+  padding: 30px 30px 30px 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.4rem;
 }
 
 p {
