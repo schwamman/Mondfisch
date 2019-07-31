@@ -1,7 +1,58 @@
 body {
-  background: url('https://media.giphy.com/media/TM5xwhEf41kbK/giphy.gif');
+  /* background: url('https://media.giphy.com/media/TM5xwhEf41kbK/giphy.gif');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background-size: cover; */
+  height: auto;
+  background-color: lightblue;
+}
+
+canvas {
+  background-color: rgba(255, 255, 255, 0.68);
+  }
+  
+#previousRound p{
+  padding: 15px;
+}
+  
+#sketchpad { 
+  display: block;  
+  border-radius: 20px;
+  margin: auto;
+}
+
+#previousRound {
+	background-color:white;
+	width:500px;
+	margin:auto;
+	height: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+#nextBtn{
+  display: block;
+  float: right;
+  border-radius:35px;
+	height:70px;
+	width:70px;
+	background-color: green;
+	color:white;
+	float:right;
+	margin-right: 20px;
+  margin-top: 15px;
+  border:none;
+  transform:translateY(- 100px);
+}
+
+#currentRound {
+ width: 60%;
+ position: relative;
+ display: block;
+ margin: auto;
+}
+
+#clearDiv {
+  clear: both;
+  margin: auto;
 }
