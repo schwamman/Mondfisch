@@ -1,7 +1,7 @@
 'use strict';
 function saveForm() {
   var userInput = document.getElementById('userInput').value;
-  localStorage.setItem('formPhrase0', userInput);
+  localStorage.setItem('formPhrase1', userInput);
 }
 
 function startButton() {
