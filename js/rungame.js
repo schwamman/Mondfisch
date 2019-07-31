@@ -321,8 +321,8 @@ function getTouchPos(e) {
   if(e.touches) {
     if (e.touches.length == 1) {
       var touch = e.touches[0];
-      touchX = touch.pageX - touch.target.parentNode.offsetLeft;
-      touchY = touch.pageY - touch.target.parentNode.offsetTop;
+      touchX = touch.pageX - touch.target.parentNode.offsetLeft - 123;
+      touchY = touch.pageY - touch.target.parentNode.offsetTop - 30;
     }
   }
 }
