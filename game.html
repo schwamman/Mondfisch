@@ -6,6 +6,16 @@
     <link rel="stylesheet" type="text/css" href="css/game.css" />
   </head>
   <body>
+    <div id='audioDiv'>
+      <audio id='mond' preload=auto loop=true autoplay=true>
+      <source src="../assets/audio/mond.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+          myAudio=document.getElementById('mond');
+          myAudio.currentTime = 108;
+        </script>
+    </div>
+
     <header>Mondfisch the Game...</header>
     <!-- Div used to store hold previous phrase or sketch -->
     <div id="previousRound">
