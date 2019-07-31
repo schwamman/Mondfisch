@@ -59,10 +59,14 @@ form {
 
 #userInput {
 	height:45px;
-	width: 495px;
+	width: 75%;
 	margin-top: 15px;
 	border-radius:25px;
 	padding: 10px;
+	text-align: center;
+	font-family: "Rocksalt", cursive;
+	color: #ff6768;
+	font-size: 1.6rem;
 }
 
 #startBtn {

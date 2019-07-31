@@ -1,19 +1,68 @@
+@font-face {
+  font-family: "Lost Fish";
+  src: url("../assets/fonts/Lost Fish.otf");
+}
+@font-face {
+  font-family: "Rocksalt";
+  src: url("../assets/fonts/RockSalt.ttf");
+}
+
+
 body {
-  /* background: url('https://media.giphy.com/media/TM5xwhEf41kbK/giphy.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   height: auto;
-  background-color: lightblue;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+}
+
+header.fish {
+	background: #17223b;
+	border-radius: 15px;
+	height:auto;
+	min-height: 130px;
+	margin: 10px auto;
+	padding: 20px;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+
+header.fish h1 {
+	line-height: 75%;
+	padding: 20px;
+	color: #fff8f0;
+	top: 20%;
+	font-size: 60px;
+	font-family: 'Lost Fish', cursive;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 20px;
+}
+
+form {
+  margin: auto;
+  display: block;
+}
+
+#leftDiv {
+	float:left;
+}
+
+#rightDiv {
+	float:right;
+}
+
+header.fish img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	top: 15px;
 }
 
 canvas {
-  background-color: rgba(255, 255, 255, 0.68);
+  background-color: #1e1f26;
   }
-  
-#previousRound p{
-  padding: 15px;
-}
   
 #sketchpad { 
   display: block;  
@@ -24,31 +73,71 @@ canvas {
 }
 
 #previousRound {
-	background-color:white;
-	width:500px;
-	margin:auto;
-	height: 50px;
+	background-color: #fff8f0;
+	width: 75%;
+	margin: auto;
+	height: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
   border-radius: 20px;
   position:relative;
   z-index: 100;
 }
+
+#previousRound h3 {
+  padding-top: 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#previousRound p {
+  padding: 15px 30px 30px 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.4rem;
+}
+
+#previousRoundSketch {
+	background-color: #1e1f26;
+	width: 75%;
+	margin: auto;
+	height: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+
+#staticImage {
+  background-color: #1e1f26;
+  display: block;
+  margin: auto;
+  width: 500px;
+  border-radius: 20px;
+  
+}
+
 #nextBtn{
   display: block;
   float: right;
   border-radius:35px;
-	height:100px;
-	width:100px;
-	background-color: green;
-	color:white;
+
+	height:70px;
+	width:70px;
+	background-color: #004a2f;
+	color:#fff8f0;
 	float:right;
 	margin-right: 20px;
   margin-top: 15px;
-  border:none;
+  border: none;
   transform:translateY(- 100px);
   position:relative;
   z-index: 1;
+
 }
 
 #currentRound {
@@ -61,6 +150,23 @@ canvas {
 #clearDiv {
   clear: both;
   margin: auto;
+}
+
+
+#phraseInput {
+  display: block;
+  height: auto;
+	width: 80%;
+	margin-top: 15px;
+	border-radius:25px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.4rem
+  z-index: 100;
+  position:relative;
 }
 
 #timer {
@@ -82,12 +188,8 @@ canvas {
   position:relative;
 }
 
-#phraseInput {
-  z-index: 100;
-  position:relative;
-}
-
 p {
   z-index: 100;
   position:relative;
 }
+

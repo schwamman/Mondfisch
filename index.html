@@ -26,21 +26,22 @@
 	</section>
 	
 	<form>
-	  <input type="text" id="userInput" value="Dracula scratches an itch under his cape">
-	  <button type="button" id="startBtn" onclick="playSound;">Start Game</button>
-	  <audio id="audio" src="../assets/audio/fart.wav" autoplay="false" preload=meta></audio>
-	  
-	  <script>
-      function playSound() {
-          var sound = document.getElementById("audio");
-          sound.play;
-      }
-    </script>
+
+    <input type="text" id="userInput" value="Dracula scratches an itch under his cape">
+    <button type="button" id="startBtn" onclick="playSound;">Start Game</button>
+    <audio id="audio" src="../assets/audio/fart.wav" autoplay="false" preload=meta></audio>
+
 	</form>
 	
 	<footer>
 	  <a href="about.html">About Us</a>
 	</footer>
+  <script>
+      function playSound() {
+          var sound = document.getElementById("audio");
+          sound.play;
+      }
+    </script>
 	<script src="js/app.js" type="text/javascript"></script>
 </body>
 
