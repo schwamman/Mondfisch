@@ -4,14 +4,17 @@ var roundCount = 0;
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
 //add event listener outside the function to run from form submit button (id="start) on index.html which starts game
 function startGame() {
+  console.log('game starting');
   renderTextPhrase(roundCount);
   renderSketchpad();
   draw();
   renderNextFormBtn();
+  timer();
 }
 
 //Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form
 function generateTextFormPage() {
+  window.clearInterval(timer);
   saveDrawing();
   clearSketchpad();
   renderStaticImage(roundCount);
@@ -19,21 +22,34 @@ function generateTextFormPage() {
   renderNextSketchButton();
   renderEndBtn();
   roundCount++;
+  timer();
+  var bigFish = document.getElementById('bigFish')
+  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
+  
 }
 
 function generateSketchPadPage() {
+  window.clearInterval(timer);
   saveForm();
   clearForm();
   renderTextPhrase(roundCount);
   renderSketchpad();
   draw();
   renderNextFormBtn();
+  timer();
+  var bigFish = document.getElementById('bigFish')
+  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
+  
 }
 
 function endGame() {
+  window.clearInterval(timer);
   saveForm();
   clearForm();
   renderResults();
+  var bigFish = document.getElementById('bigFish')
+  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
+  var timerLocation = document.getElementsByTagName('body')[0].removeChild(timer);
 }
 
 //rendering the canvas pad
@@ -101,6 +117,7 @@ function renderNextFormBtn() {
   var buttonsLocation = document.getElementById('buttons');
   nextButton.addEventListener('click', generateTextFormPage);
   buttonsLocation.appendChild(nextButton);
+  
 }
 
 //end button

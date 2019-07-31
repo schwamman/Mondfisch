@@ -19,6 +19,8 @@ canvas {
   display: block;  
   border-radius: 20px;
   margin: auto;
+  position:relative;
+  z-index: 100;
 }
 
 #previousRound {
@@ -28,14 +30,16 @@ canvas {
 	height: 50px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	border-radius: 20px;
+  border-radius: 20px;
+  position:relative;
+  z-index: 100;
 }
 #nextBtn{
   display: block;
   float: right;
   border-radius:35px;
-	height:70px;
-	width:70px;
+	height:100px;
+	width:100px;
 	background-color: green;
 	color:white;
 	float:right;
@@ -43,6 +47,8 @@ canvas {
   margin-top: 15px;
   border:none;
   transform:translateY(- 100px);
+  position:relative;
+  z-index: 1;
 }
 
 #currentRound {
@@ -55,4 +61,33 @@ canvas {
 #clearDiv {
   clear: both;
   margin: auto;
+}
+
+#timer {
+  background-color: red;
+  font-style: bold;
+  font-family: monospace;
+	font-size: 155px;
+	color:white;
+  border-radius: 33px;
+  padding: 15px 15px 15px 15px;
+  position:relative;
+  margin-left: 45%;
+  top: 90px;
+  z-index: 100;
+}
+
+#endBtn {
+  z-index: 100;
+  position:relative;
+}
+
+#phraseInput {
+  z-index: 100;
+  position:relative;
+}
+
+p {
+  z-index: 100;
+  position:relative;
 }

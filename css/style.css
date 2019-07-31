@@ -77,7 +77,36 @@ form {
 	border:none;
 }
 
-#mond {
-	position:fixed;
-	top: 10000px;
+#timer {
+	background-color: white;
+	font-size: 100px;
+	color:red;
+	border-radius: 20px;
+}
+
+#sadBilly {
+	position:relative;
+	
+}
+
+#intro {
+	color:blue;
+	font-size: 33px;
+	font-family: helvetica;
+	padding:15px;
+}
+
+#example {
+	font-size: 50px;
+	font-style: bold;
+	font-weight: 10;
+	color:white;
+}
+
+#endBtn {
+	z-index: 1;
+}
+
+#phraseInput {
+	z-index: 1;
 }

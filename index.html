@@ -19,14 +19,25 @@
 		
 		
 	</header>
-	<section>
-		<p>Introduction to this game</p>
+	<section id='intro'>
+		<p>Mondfisch is a game that showcases the wonderous mystery that is interpretration. </br> 
+		A round will begin with a phrase, such as: <b id='example'>"Billy just received his paycheck."</b> </br>Then hit the 'Next' button.</br>
+	    You will be presented with a sketchpad. Draw a picture before the timer runs out, such as: <img id='sadBilly' src='../assets/img/sadBilly.png' height=500px></p>
 	</section>
-	<section>Drawing pic</section>
+	
 	<form>
 	  <input type="text" id="userInput" value="Dracula scratches an itch under his cape">
-	  <button type="button" id="startBtn">Start Game</button>
+	  <button type="button" id="startBtn" onclick="playSound;">Start Game</button>
+	  <audio id="audio" src="../assets/audio/fart.wav" autoplay="false" preload=meta></audio>
+	  
+	  <script>
+      function playSound() {
+          var sound = document.getElementById("audio");
+          sound.play;
+      }
+    </script>
 	</form>
+	
 	<footer>
 	  <a href="about.html">About Us</a>
 	</footer>
