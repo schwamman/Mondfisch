@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use strict";
 var roundCount = 0;
 
@@ -140,7 +139,6 @@ function renderNextSketchButton() {
   //append button to game.html
   btn.appendChild(nextBtn);
 }
-=======
 'use strict';
 function saveForm() {
   var userInput = document.getElementById('userInput').value;
@@ -154,4 +152,3 @@ function startButton() {
 
 var btnLocation = document.getElementById('startBtn');
 btnLocation.addEventListener('click', startButton)
->>>>>>> 6334a945f20e3870ac5a91bd5344d4b1f241be1f
