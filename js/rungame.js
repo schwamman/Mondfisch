@@ -34,6 +34,7 @@ function endGame() {
   saveForm();
   clearForm();
   renderResults();
+  localStorage.clear();
 }
 
 //rendering the canvas pad
@@ -128,6 +129,7 @@ function renderTextForm() {
   var form = document.createElement('form');
   form.setAttribute('type', 'text');
   var input = document.createElement('input');
+  input.setAttribute('placeholder', "Guess what was drawn");
   input.id = 'phraseInput';
   form.appendChild(input);
   var formLocation = document.getElementById('currentRound');
@@ -141,6 +143,25 @@ function renderTextPhrase(count) {
   previousLocation.setAttribute('id', 'previousRound');
 
   var phraseLocation = document.getElementById('previousRound');
+  var printInstructions = document.createElement('h3');
+  printInstructions.textContent = 'Draw this phrase:';
+  phraseLocation.appendChild(printInstructions);
+  var printTextPhrase = document.createElement('p');
+  printTextPhrase.textContent = localStorage.getItem(
+    'formPhrase' + count);
+  phraseLocation.appendChild(printTextPhrase);
+}
+
+function renderTextPhraseEnd(count) {
+  //Remove and change id for previousRound to previousRoundSketch
+  var previousLocation = document.getElementById('previousRoundSketch');
+  previousLocation.removeAttribute('id');
+  previousLocation.setAttribute('id', 'previousRound');
+
+  var phraseLocation = document.getElementById('previousRound');
+  var printInstructions = document.createElement('h3');
+  printInstructions.textContent = 'Round ' + count;
+  phraseLocation.appendChild(printInstructions);
   var printTextPhrase = document.createElement('p');
   printTextPhrase.textContent = localStorage.getItem(
     'formPhrase' + count);
@@ -162,11 +183,10 @@ function renderNextSketchButton() {
 
 function renderResults () {
   for (var i = 0; i < roundCount; i++) {
-    console.log(localStorage.getItem('formPhrase' + i));
-    renderTextPhrase(i);
+    renderTextPhraseEnd(i);
     renderStaticImage(i);
   }
-  renderTextPhrase(i + 1);
+  renderTextPhraseEnd(i + 1);
 }
 
 // function draw() {

@@ -40,6 +40,11 @@ header.fish h1 {
 	margin-top: 20px;
 }
 
+form {
+  margin: auto;
+  display: block;
+}
+
 #leftDiv {
 	float:left;
 }
@@ -75,8 +80,18 @@ canvas {
 	border-radius: 20px;
 }
 
-#previousRound p{
-  padding: 30px;
+#previousRound h3 {
+  padding-top: 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#previousRound p {
+  padding: 15px 30px 30px 30px;
   text-align: center;
   font-family: "Rocksalt", cursive;
   color: #ff6768;
@@ -93,18 +108,13 @@ canvas {
 	border-radius: 20px;
 }
 
-#previousRoundSketch p{
-  padding: 30px;
-  text-align: center;
-  font-family: "Rocksalt", cursive;
-  color: #fff8f0;
-  font-size: 1.4rem;
-}
-
 #staticImage {
   background-color: #1e1f26;
   display: block;
   margin: auto;
+  width: 500px;
+  border-radius: 20px;
+  
 }
 
 #nextBtn{
@@ -131,4 +141,18 @@ canvas {
 #clearDiv {
   clear: both;
   margin: auto;
+}
+
+#phraseInput {
+  display: block;
+  height: auto;
+	width: 80%;
+	margin-top: 15px;
+	border-radius:25px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  font-family: "Rocksalt", cursive;
+  color: #ff6768;
+  font-size: 1.4rem
 }
