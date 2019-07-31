@@ -1,5 +1,5 @@
 'use strict';
-var roundCount = 0;
+var roundCount = 1;
 
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
 //add event listener outside the function to run from form submit button (id="start) on index.html which starts game
@@ -226,10 +226,14 @@ function renderNextSketchButton() {
 }
 
 function renderResults () {
-  for (var i = 0; i < roundCount; i++) {
+  for (var i = 1; i < roundCount; i++) {
     renderTextPhraseEnd(i);
     renderStaticImage(i);
   }
+  renderTextPhraseEnd(i);
+  var previousLocation = document.getElementById('previousRound');
+  previousLocation.removeAttribute('id');
+  previousLocation.setAttribute('id', 'previousRoundSketch');
 }
 
 var canvas,ctx;
