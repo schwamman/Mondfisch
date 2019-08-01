@@ -5,7 +5,7 @@ function timer() {
   timerLocation.innerHTML = ''
   var countdown = document.createElement("span");
   countdown.id = 'timer';
-  countdown.textContent = '60'
+  countdown.textContent = '90';
   timerLocation.appendChild(countdown);
   var countItDown = function() {
     var currentTime = parseFloat(countdown.textContent);
@@ -18,7 +18,7 @@ function timer() {
       init();
     }
   }
-  var timer = window.setInterval(countItDown, 100);
+  var timer = window.setInterval(countItDown, 1000);
 };
 //Call that on an interval
 
