@@ -5,9 +5,19 @@
 	<title>Mondfisch</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script>function playSound(){
+		var audio = document.createElement('audio');
+		audio.style.display = "none";
+		audio.src = '../assets/audio/fireSide.mp3';
+		audio.autoplay = true;
+		audio.loop = true;
+		document.body.appendChild(audio);
+	  }
+	  playSound();
+	</script>
 </head>
 
-<body>
+<body id='indexBody'>
 	<header class="fish">
 		<a href="index.html"><h1>Mondfisch</h1></a>
 		
@@ -26,7 +36,7 @@
    	</form>
 	
 	<footer>
-	  <a href="about.html">About Us</a>
+	  <a id='aboutUs' href="about.html">About Us</a>
 	</footer>
 	<script src="js/app.js" type="text/javascript"></script>
 </body>

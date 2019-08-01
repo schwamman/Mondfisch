@@ -3,7 +3,7 @@
     src: url("../assets/fonts/Lost Fish.otf");
   }
 
-body {
+#gameBody {
 	text-align: center;
 	background-color: #2a2a72;
   	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
@@ -36,6 +36,8 @@ header.fish h1 {
 
 a {
 	text-decoration: none;
+	/* bottom:300px;
+	position:relative; */
 }
 
 #leftDiv {
@@ -111,4 +113,26 @@ form {
 
 #phraseInput {
 	z-index: 1;
+}
+
+#aboutUs {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	left:1500px;
+	bottom:-550px;
+	color:white;
+}
+
+#aboutUsBody {
+	background-color:black;
+	color:white;
+	text-align: center;
+}
+
+#indexBody {
+	background-color:rgb(212, 0, 255);
+	color:white;
+	text-align: center;
+	background-image: linear-gradient(188deg,#000000 25%, #3824e6 50%, #b1fd00 25%);
 }
