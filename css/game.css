@@ -258,4 +258,23 @@ p {
   z-index: 100;
   position:relative;
 }
-
+#footer {
+	background-color: #17223b;
+	color: white;
+	min-height: 25px;
+	margin: 5px auto;
+	margin-right: auto;
+	font-size: 25px;
+	margin-top: 25px;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 15px;
+	padding-bottom: 15px;
+	position: absolute;
+    left: 20px;
+    bottom: 0;
+    height: auto;
+    width: 95%;
+}

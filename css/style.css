@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "Lost Fish";
-    src: url("../assets/fonts/Lost Fish.otf");
-  }
+	font-family: "Lost Fish";
+	src: url("../assets/fonts/Lost Fish.otf");
+}
 
 body {
 	text-align: center;
 	background-color: #2a2a72;
-  	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
 header {
@@ -17,9 +17,9 @@ header {
 	margin: 10px auto;
 	padding: 20px;
 	width: 95%;
-	margin-left:auto;
-	margin-right:auto;
-	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 }
 
 header.fish h1 {
@@ -39,11 +39,11 @@ a {
 }
 
 #leftDiv {
-	float:left;
+	float: left;
 }
 
 #rightDiv {
-	float:right;
+	float: right;
 }
 
 form {
@@ -52,14 +52,14 @@ form {
 	width: 90%;
 	height: 100px;
 	background-color: rgba(8, 46, 89, 0.9);
-	border-radius:25px;
+	border-radius: 25px;
 }
 
 #userInput {
-	height:45px;
+	height: 45px;
 	width: 75%;
 	margin-top: 15px;
-	border-radius:25px;
+	border-radius: 25px;
 	padding: 10px;
 	text-align: center;
 	font-family: "Rocksalt", cursive;
@@ -68,41 +68,41 @@ form {
 }
 
 #startBtn {
-	border-radius:35px;
-	height:70px;
-	width:70px;
+	border-radius: 35px;
+	height: 70px;
+	width: 70px;
 	background-color: green;
-	color:white;
-	float:right;
+	color: white;
+	float: right;
 	margin-right: 20px;
 	margin-top: 15px;
-	border:none;
+	border: none;
 }
 
 #timer {
 	background-color: white;
 	font-size: 100px;
-	color:red;
+	color: red;
 	border-radius: 20px;
 }
 
 #sadBilly {
-	position:relative;
-	
+	position: relative;
+
 }
 
 #intro {
-	color:blue;
+	color: blue;
 	font-size: 33px;
 	font-family: helvetica;
-	padding:15px;
+	padding: 15px;
 }
 
 #example {
 	font-size: 50px;
 	font-style: bold;
 	font-weight: 10;
-	color:white;
+	color: white;
 }
 
 #endBtn {
@@ -111,4 +111,31 @@ form {
 
 #phraseInput {
 	z-index: 1;
+}
+
+#about a:link,
+a:visited {
+	background-color: #17223b;
+	color: white;
+	min-height: 25px;
+	margin: 5px auto;
+	margin-right: auto;
+	position: relative;
+	font-size: 25px;
+	margin-top: 25px;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 15px;
+
+}
+
+#about a:hover,
+a:active {
+	background-color: #17223b;
+}
+.fish p{
+	font-size: 50px;
+	color: white;
 }
