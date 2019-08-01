@@ -166,7 +166,8 @@ function renderTextForm() {
   var form = document.createElement('form');
   // form.setAttribute('type', 'text');
   var input = document.createElement('textarea');
-  input.setAttribute('placeholder', "Guess what was drawn");
+  input.setAttribute('placeholder', 'Guess what was drawn');
+  input.setAttribute('autofocus', '');
   input.id = 'phraseInput';
   form.appendChild(input);
   var formLocation = document.getElementById('currentText');
@@ -229,7 +230,7 @@ function changeId(previousID, newID) {
 
 function playSound() {
   var audio = document.createElement('audio');
-  audio.style.display = "none";
+  audio.style.display = 'none';
   audio.src = '../assets/audio/mond.mp3';
   audio.autoplay = true;
   audio.loop = true;
@@ -266,7 +267,7 @@ function drawLine(ctx,x,y,size) {
 }
 
 function clearCanvas(canvas,ctx) {
-  console.log("In function");
+  console.log('In function');
   console.log(canvas);
   console.log(ctx);
   ctx.clearRect(0, 0, canvas.width, canvas.height);

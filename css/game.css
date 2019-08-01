@@ -174,7 +174,7 @@ a {
   float: right;
   text-align: center;
   width: 300px;
-  margin-right: 23%;
+  margin-right: 22%;
 }
 
 #right-col-sketch {
@@ -299,6 +299,11 @@ footer {
   font-size: 2rem;
 }
 
+#about {
+  margin-top: 120px;
+  font-family: "Lost Fish";
+}
+
 #about a:link,
 a:visited {
 	background-color: #17223b;
@@ -309,7 +314,6 @@ a:visited {
 	margin-right: auto;
 	position: relative;
 	font-size: 25px;
-	margin-top: 25px;
 	padding: 14px 25px;
 	text-align: center;
 	text-decoration: none;
