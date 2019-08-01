@@ -65,7 +65,6 @@ function endGame() {
   timerLocation.removeChild(timerLocation.firstChild);
 
   var previousLocation = document.getElementById('previousRoundSketch');
-  console.log(previousLocation);
   previousLocation.removeAttribute('id');
   previousLocation.setAttribute('id', 'endResults');
 
@@ -92,8 +91,7 @@ function renderSketchpad() {
   var clearBtn = document.createElement('button');
   clearBtn.textContent = 'Clear';
   clearBtn.setAttribute('id', 'clearBtn');
-  clearBtn.addEventListener('click', function() {clearCanvas(sketchpad,ctx)}
-    );
+  clearBtn.addEventListener('click', function() {clearCanvas(sketchpad,ctx);});
   clearLocation.appendChild(clearBtn);
 }
 

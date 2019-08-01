@@ -1,0 +1,75 @@
+@font-face {
+	font-family: "Lost Fish";
+	src: url("../assets/fonts/Lost Fish.otf");
+}
+
+body {
+	text-align: center;
+	background-color: #2a2a72;
+	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+header {
+	background: #17223b;
+	border-radius: 15px;
+	height: auto;
+	min-height: 130px;
+	margin: 10px auto;
+	padding: 20px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+h1 {
+	line-height: 75%;
+	padding: 10px;
+	color: #fff;
+	top: 10%;
+	font-size: 60px;
+	font-family: 'Lost Fish', cursive;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 10px;
+}
+
+h2 {
+	font-size: 40px;
+	color: white;
+}
+a {
+	text-decoration: none;
+}
+
+#aboutus h2 {
+	background-color: #17223b;
+	border-radius: 15px;
+	border: solid 3px white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	font-size: 40px;
+	color: white;
+}
+
+section.full-width h3 {
+	margin: auto;
+}
+
+div.usentry {
+	text-align: center;
+	display: inline-block;
+	margin: 12px;
+}
+
+div.usentry img {
+	height: 300px;
+	width: 400px;
+	border: solid 10px #17223b;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
+}
+
+footer {
+	font-size: 30px;
+	color: white;
+}
