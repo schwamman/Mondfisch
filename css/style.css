@@ -6,7 +6,18 @@
 @font-face {
 	font-family: "Rocksalt";
 	src: url("../assets/fonts/RockSalt.ttf");
+}
+@-webkit-keyframes greenPulse {
+	from { background-color: #004a2f; -webkit-box-shadow: 0 0 9px #333; }
+	50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+	to { background-color: #004a2f; -webkit-box-shadow: 0 0 9px #333; }
+}
+@-webkit-keyframes whitePulse {
+	from { background-color: #fff8f0; -webkit-box-shadow: 0 0 20px #fff8f0; }
+	50% { background-color: #fff8f0; -webkit-box-shadow: 0 0 45px #1e1f26; }
+	to { background-color: #fff8f0; -webkit-box-shadow: 0 0 20px #fff8f0; }
   }
+
 
 #gameBody {
 	text-align: center;
@@ -37,6 +48,7 @@ header.fish h1 {
 	text-align: center;
 	vertical-align: middle;
 	margin-top: 20px;
+	letter-spacing: 2rem;
 }
 
 a {
@@ -99,6 +111,9 @@ form {
 	font-family: "Rocksalt", cursive;
 	color: #ff6768;
 	font-size: 1.6rem;
+	-webkit-animation-name: whitePulse;
+  	-webkit-animation-duration: 2s;
+  	-webkit-animation-iteration-count: infinite;
 }
 
 #startBtn {
@@ -111,6 +126,9 @@ form {
 	margin-right: 20px;
 	margin-top: 15px;
 	border: none;
+	-webkit-animation-name: greenPulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
 }
 
 #timer {
@@ -130,9 +148,7 @@ form {
 	line-height: 1.6rem;
 }
 
-#phraseInput {
-	z-index: 1;
-}
+
 
 #about a:link,
 a:visited {

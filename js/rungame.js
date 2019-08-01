@@ -1,16 +1,6 @@
 'use strict';
 //do not move this; it took forever to get it to work again correctly. thank you!
 var roundCount = 1;
-function playSound() {
-  var audio = document.createElement('audio');
-  audio.style.display = "none";
-  audio.src = '../assets/audio/mond.mp3';
-  audio.autoplay = true;
-  audio.loop = true;
-  audio.currentTime = 390;
-  document.body.appendChild(audio);
-}
-playSound();
 
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
 //add event listener outside the function to run from form submit button (id="start) on index.html which starts game
@@ -18,17 +8,19 @@ function startGame() {
   renderTextPhrase(roundCount);
   renderSketchpad();
   init();
+  changeId('right-col', 'right-col-sketch');
   renderNextFormBtn();
   timer();
 }
 
 //Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form
 function generateTextFormPage() {
-  window.clearInterval(timer);
+  // window.clearInterval(timer);
   saveDrawing();
   clearSketchpad();
   renderStaticImage(roundCount);
   renderTextForm();
+  changeId('right-col-sketch', 'right-col');
   renderNextSketchButton();
   renderEndBtn();
   roundCount++;
@@ -45,6 +37,7 @@ function generateSketchPadPage() {
   renderTextPhrase(roundCount);
   renderSketchpad();
   init();
+  changeId('right-col', 'right-col-sketch');
   renderNextFormBtn();
   timer();
   var bigFish = document.getElementById('bigFish')
@@ -64,17 +57,13 @@ function endGame() {
   var timerLocation = document.getElementById('timerDiv');
   timerLocation.removeChild(timerLocation.firstChild);
 
-  var previousLocation = document.getElementById('previousRoundSketch');
-  previousLocation.removeAttribute('id');
-  previousLocation.setAttribute('id', 'endResults');
+  changeId('previousRoundSketch', 'endResults');
 
 }
 
 //rendering the canvas pad
 function renderSketchpad() {
-  var currentLocation = document.getElementById('currentText');
-  currentLocation.removeAttribute('id');
-  currentLocation.setAttribute('id', 'currentRound');
+  changeId('currentText', 'currentRound')
   
   var canvas = document.createElement('canvas');
   var sketchpadLocation = document.getElementById('currentRound');
@@ -129,10 +118,7 @@ function renderStaticImage(count) {
   staticImage.setAttribute('width', '500');
   staticImage.setAttribute('height', '500');
 
-  //Remove and change id for previousRound to previousRoundSketch
-  var previousLocation = document.getElementById('previousRound');
-  previousLocation.removeAttribute('id');
-  previousLocation.setAttribute('id', 'previousRoundSketch');
+  changeId('previousRound', 'previousRoundSketch');
 
   var dataURL = localStorage.getItem('sketch' + count);
   staticImage.src = dataURL;
@@ -175,13 +161,11 @@ function renderEndBtn() {
 }
 
 function renderTextForm() {
-  var currentLocation = document.getElementById('currentRound');
-  currentLocation.removeAttribute('id');
-  currentLocation.setAttribute('id', 'currentText');
+  changeId('currentRound', 'currentText');
 
   var form = document.createElement('form');
-  form.setAttribute('type', 'text');
-  var input = document.createElement('input');
+  // form.setAttribute('type', 'text');
+  var input = document.createElement('textarea');
   input.setAttribute('placeholder', "Guess what was drawn");
   input.id = 'phraseInput';
   form.appendChild(input);
@@ -190,10 +174,7 @@ function renderTextForm() {
 }
 
 function renderTextPhrase(count) {
-  //Remove and change id for previousRound to previousRoundSketch
-  var previousLocation = document.getElementById('previousRoundSketch');
-  previousLocation.removeAttribute('id');
-  previousLocation.setAttribute('id', 'previousRound');
+  changeId('previousRoundSketch', 'previousRound')
 
   var phraseLocation = document.getElementById('previousRound');
   var printInstructions = document.createElement('h3');
@@ -206,10 +187,7 @@ function renderTextPhrase(count) {
 }
 
 function renderTextPhraseEnd(count) {
-  //Remove and change id for previousRound to previousRoundSketch
-  var previousLocation = document.getElementById('previousRoundSketch');
-  previousLocation.removeAttribute('id');
-  previousLocation.setAttribute('id', 'previousRound');
+  changeId('previousRoundSketch', 'previousRound');
 
   var phraseLocation = document.getElementById('previousRound');
   var printInstructions = document.createElement('h3');
@@ -240,10 +218,27 @@ function renderResults () {
     renderStaticImage(i);
   }
   renderTextPhraseEnd(i);
-  var previousLocation = document.getElementById('previousRound');
-  previousLocation.removeAttribute('id');
-  previousLocation.setAttribute('id', 'previousRoundSketch');
+  changeId('previousRound', 'previousRoundSketch');
 }
+
+function changeId(previousID, newID) {
+  var previousLocation = document.getElementById(previousID);
+  previousLocation.removeAttribute('id');
+  previousLocation.setAttribute('id', newID);
+}
+
+function playSound() {
+  var audio = document.createElement('audio');
+  audio.style.display = "none";
+  audio.src = '../assets/audio/mond.mp3';
+  audio.autoplay = true;
+  audio.loop = true;
+  audio.currentTime = 390;
+  document.body.appendChild(audio);
+}
+playSound();
+
+//Drawing Function ==========================================================
 
 var canvas,ctx;
 var mouseX, mouseY, mouseDown = 0;
@@ -334,7 +329,7 @@ function getTouchPos(e) {
   if(e.touches) {
     if (e.touches.length == 1) {
       var touch = e.touches[0];
-      touchX = touch.pageX - touch.target.parentNode.offsetLeft - 123;
+      touchX = touch.pageX - touch.target.parentNode.offsetLeft - 330;
       touchY = touch.pageY - touch.target.parentNode.offsetTop - 30;
     }
   }
