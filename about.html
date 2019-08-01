@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>About Us</title><script>
+    function playSound(){
+      var audio = document.createElement('audio');
+      audio.style.display = "none";
+      audio.src = '../assets/audio/cloudBumping.mp3';
+      audio.autoplay = true;
+      audio.loop = true;
+      document.body.appendChild(audio);
+    }
+    playSound();
+  </script>
   </head>
-  <body>
+  <body id=aboutUsBody>
     <h1>About Us</h1>
-    <p>Will add four pictures of us. Jon, Scott, Freemand and Steven</p>
+    <p>Who We Are:</p>
 
     <div
       style="width:800px; font-size:80px; font-style: helvetica; text-align:center; color:rgb(153, 255, 0); background-color:black;"
@@ -21,5 +32,6 @@
       />
       Scott Bisese
     </div>
+    <footer><p>Music is by Grimly Wallace, titled 'Cloud Bumping'</br> Music on game page is: Grimly Wallace - Mond</br> Music on home page is: Grimly Wallace - fireSide</br> All Rights Reserved 2019</p></footer>
   </body>
 </html>
