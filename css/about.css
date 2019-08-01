@@ -38,11 +38,15 @@ h2 {
 	font-size: 40px;
 	color: white;
 }
+a {
+	text-decoration: none;
+}
+
 #aboutus h2 {
 	background-color: #17223b;
 	border-radius: 15px;
-	border: solid 10px #17223b;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: solid 3px white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	font-size: 40px;
 	color: white;
 }
@@ -52,37 +56,20 @@ section.full-width h3 {
 }
 
 div.usentry {
-  text-align: center;
-  display: inline-block;
-  margin: 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 12px;
 }
 
 div.usentry img {
-  width: 400px;  
-  border: solid 10px #17223b; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 25px;
+	height: 300px;
+	width: 400px;
+	border: solid 10px #17223b;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 25px;
 }
-#footer {
-	background-color: #17223b;
+
+footer {
+	font-size: 30px;
 	color: white;
-	min-height: 25px;
-	margin: 5px auto;
-	margin-right: auto;
-	font-size: 25px;
-	margin-top: 25px;
-	padding: 14px 25px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 15px;
-	padding-bottom: 15px;
-	position: absolute;
-    left: 20px;
-    bottom: 0;
-    height: auto;
-    width: 95%;
 }
-
-
-
