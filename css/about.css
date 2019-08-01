@@ -2,6 +2,10 @@
 	font-family: "Lost Fish";
 	src: url("../assets/fonts/Lost Fish.otf");
 }
+@font-face {
+	font-family: "Rocksalt";
+	src: url("../assets/fonts/RockSalt.ttf");
+}
 
 body {
 	text-align: center;
@@ -31,8 +35,8 @@ h1 {
 	font-family: 'Lost Fish', cursive;
 	text-align: center;
 	vertical-align: middle;
-	margin-top: 10px;
 	letter-spacing: 2rem;
+
 }
 
 h2 {
@@ -71,6 +75,17 @@ div.usentry img {
 }
 
 footer {
-	font-size: 30px;
-	color: white;
+	margin-top: 150px;
+	font-size: 1rem;
+	color: #fff8f0;
+	font-family: "RockSalt";
+}
+
+footer a {
+	text-decoration: none;
+	color: hotpink;
+}
+
+footer a:visited {
+	color: limegreen;
 }

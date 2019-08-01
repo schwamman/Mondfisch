@@ -149,6 +149,10 @@ form {
 }
 
 
+#about {
+	font-family: "Lost Fish";
+	margin-top: 120px;
+}
 
 #about a:link,
 a:visited {
@@ -203,6 +207,7 @@ a:active {
 
 #sadBilly {
 	width: 50%;
+	margin-top: 60px;
 }
 
 .clearDiv {
