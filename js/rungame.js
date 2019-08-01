@@ -1,5 +1,16 @@
 'use strict';
+//do not move this; it took forever to get it to work again correctly. thank you!
 var roundCount = 1;
+function playSound() {
+  var audio = document.createElement('audio');
+  audio.style.display = "none";
+  audio.src = '../assets/audio/mond.mp3';
+  audio.autoplay = true;
+  audio.loop = true;
+  audio.currentTime = 390;
+  document.body.appendChild(audio);
+}
+playSound();
 
 //Save initial text form on homepage to local storage, then clear html elements from homepage and render sketchpad, can set to start on event button click
 //add event listener outside the function to run from form submit button (id="start) on index.html which starts game
@@ -54,7 +65,6 @@ function endGame() {
   timerLocation.removeChild(timerLocation.firstChild);
 
   var previousLocation = document.getElementById('previousRoundSketch');
-  console.log(previousLocation);
   previousLocation.removeAttribute('id');
   previousLocation.setAttribute('id', 'endResults');
 
@@ -81,8 +91,7 @@ function renderSketchpad() {
   var clearBtn = document.createElement('button');
   clearBtn.textContent = 'Clear';
   clearBtn.setAttribute('id', 'clearBtn');
-  clearBtn.addEventListener('click', function() {clearCanvas(sketchpad,ctx)}
-    );
+  clearBtn.addEventListener('click', function() {clearCanvas(sketchpad,ctx);});
   clearLocation.appendChild(clearBtn);
 }
 
@@ -347,11 +356,4 @@ function init() {
   }
 }
 
-function audio() {
-  myAudio=document.getElementById('mond');
-  myAudio.currentTime = 250;
-}
-
-
 window.onload = startGame(); 
-window.onload = audio();

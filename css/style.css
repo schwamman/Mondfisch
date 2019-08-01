@@ -3,7 +3,12 @@
 	src: url("../assets/fonts/Lost Fish.otf");
 }
 
-body {
+@font-face {
+	font-family: "Rocksalt";
+	src: url("../assets/fonts/RockSalt.ttf");
+  }
+
+#gameBody {
 	text-align: center;
 	background-color: #2a2a72;
 	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
@@ -38,12 +43,41 @@ a {
 	text-decoration: none;
 }
 
-#leftDiv {
+#intro {
 	float: left;
+	box-sizing: border-box;
+	width: 42.5%;
+	background-color: #fff8f0;
+	font-size: 1.6rem;
+	margin-left: 5%;
+	margin-right: 2.50%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #1e1f26;
+	border-radius: 15px;
+	font-family: 'Comfortaa', cursive;
+	line-height: 1.8rem;
+	padding: 15px;
+	height: 500px;
 }
 
-#rightDiv {
+#intro p {
+	padding-top: 45px;
+}
+
+#intro em {
+	font-weight: bold;
+}
+section {
 	float: right;
+	width: 42.5%;
+	margin-right: 5%;
+	margin-left: 2.5%;
+	height: 500px;
+	background-color: #1e1f26;
+	border-radius: 15px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 form {
@@ -86,27 +120,14 @@ form {
 	border-radius: 20px;
 }
 
-#sadBilly {
-	position: relative;
-
-}
-
-#intro {
-	color: blue;
-	font-size: 33px;
-	font-family: helvetica;
-	padding: 15px;
-}
 
 #example {
-	font-size: 50px;
+	font-size: 1.8rem;
 	font-style: bold;
 	font-weight: 10;
-	color: white;
-}
-
-#endBtn {
-	z-index: 1;
+	color: #ff6768;
+	font-family: "Rocksalt", cursive;
+	line-height: 1.6rem;
 }
 
 #phraseInput {
@@ -118,7 +139,8 @@ a:visited {
 	background-color: #17223b;
 	color: white;
 	min-height: 25px;
-	margin: 5px auto;
+	margin-bottom: 30px;
+	margin-left: auto;
 	margin-right: auto;
 	position: relative;
 	font-size: 25px;
@@ -128,6 +150,7 @@ a:visited {
 	text-decoration: none;
 	display: inline-block;
 	border-radius: 15px;
+	width: 90%;
 
 }
 
@@ -135,7 +158,37 @@ a:visited {
 a:active {
 	background-color: #17223b;
 }
+
 .fish p{
 	font-size: 50px;
 	color: white;
+}
+
+#aboutUs {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	left:1500px;
+	bottom:-550px;
+	color:white;
+}
+
+#aboutUsBody {
+	background-color:black;
+	color:white;
+	text-align: center;
+}
+
+#indexBody {
+	text-align: center;
+	background-color: #2a2a72;
+	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+#sadBilly {
+	width: 50%;
+}
+
+.clearDiv {
+	clear: both;
 }

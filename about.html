@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,26 +17,36 @@
 </header>
 
 <body>
-
-
 	<section id="aboutus" class="full-width">
-			<div class="usentry">
-				<h2>Steven Jones</h2>
-				<img title="Steven Jones" alt="Steven Jones" src="/assets/img/IMG_2366 copy.jpg" />
-			</div>
-			<div class="usentry">
-				<h2>Scott Bisese</h2>
-				<img title="Scott Bisese" alt="Scott Bisese" src="/assets/img/scott.gif" />
-			</div>
-			<div class="usentry">
-			<h2>Jon Schwamman</h2>
-				<img title="Jon Schwamman" alt="Jon Schwamman" src="/assets/img/sadBilly.png" />
-			</div>
-			<div class="usentry">
-				<h2>Mondfisch</h2>
-				<img title="Steven Jones" alt="Steven Jones" src="assets/img/sunfish.png" />
-			</div>
+		<div class="usentry">
+			<h2>Steven Jones</h2>
+			<img title="Steven Jones" alt="Steven Jones" src="/assets/img/IMG_2366 copy.jpg" />
+		</div>
+		<div class="usentry">
+			<h2>Scott Bisese</h2>
+			<img title="Scott Bisese" alt="Scott Bisese" src="/assets/img/scott.gif" />
+		</div>
+		<div class="usentry">
+		<h2>Jon Schwamman</h2>
+			<img title="Jon Schwamman" alt="Jon Schwamman" src="/assets/img/sadBilly.png" />
+		</div>
+		<div class="usentry">
+			<h2>Mondfisch</h2>
+			<img title="Steven Jones" alt="Steven Jones" src="assets/img/sunfish.png" />
+		</div>
 	</section>
-	<div id="footer"><footer>Mondfisch ~ All Rights Reserved 2019</footer></div>	
+	<script>
+		function playSound(){
+		  var audio = document.createElement('audio');
+		  audio.style.display = "none";
+		  audio.src = '../assets/audio/cloudBumping.mp3';
+		  audio.autoplay = true;
+		  audio.loop = true;
+		  document.body.appendChild(audio);
+		}
+		playSound();
+	  </script>
+	<footer><p>Music is by Grimly Wallace, titled 'Cloud Bumping'</br> Music on game page is: Grimly Wallace - Mond</br> Music on home page is: Grimly Wallace - fireSide</br> All Rights Reserved 2019</p></footer>	
 </body>
 </html>
+

@@ -112,7 +112,7 @@ a {
 	width: 50%;
 	margin-left: 30px;
 	height: auto;
-	margin-top: 30px;
+	margin-top: 120px;
 	margin-bottom: 30px;
   border-radius: 20px;
   float: left;
@@ -259,3 +259,30 @@ p {
   position:relative;
 }
 
+footer {
+  margin-top: 30px;
+	position:relative;
+	text-align: center;
+  color:white;
+  font-size: 2rem;
+}
+
+#about a:link,
+a:visited {
+	background-color: #17223b;
+	color: white;
+	min-height: 25px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-size: 25px;
+	margin-top: 25px;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  border-radius: 15px;
+  width: 90%;
+
+}
