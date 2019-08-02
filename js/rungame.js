@@ -221,7 +221,7 @@ function changeId(previousID, newID) {
 function playSound() {
   var audio = document.createElement('audio');
   audio.style.display = 'none';
-  audio.src = '../assets/audio/mond.mp3';
+  audio.src = 'assets/audio/mond.mp3';
   audio.autoplay = true;
   audio.loop = true;
   audio.currentTime = 390;
