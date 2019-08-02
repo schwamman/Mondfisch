@@ -15,7 +15,6 @@ function startGame() {
 
 //Save sketchpad image to local storage - can store using canvas.toDataURL(), then clear sketchpad, render saved drawing as static image and render new text form
 function generateTextFormPage() {
-  // window.clearInterval(timer);
   saveDrawing();
   clearSketchpad();
   renderStaticImage(roundCount);
@@ -25,8 +24,6 @@ function generateTextFormPage() {
   renderEndBtn();
   roundCount++;
   timer();
-  var bigFish = document.getElementById('bigFish')
-  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
   
 }
 
@@ -39,10 +36,7 @@ function generateSketchPadPage() {
   init();
   changeId('right-col', 'right-col-sketch');
   renderNextFormBtn();
-  timer();
-  var bigFish = document.getElementById('bigFish')
-  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
-  
+  timer();  
 }
 
 function endGame() {
@@ -51,14 +45,10 @@ function endGame() {
   clearForm();
   renderResults();
   localStorage.clear();
-
-  var bigFish = document.getElementById('bigFish')
-  if(bigFish) document.getElementsByTagName('body')[0].removeChild(bigFish);
-  var timerLocation = document.getElementById('timerDiv');
-  timerLocation.removeChild(timerLocation.firstChild);
-
   changeId('previousRoundSketch', 'endResults');
 
+  var timerLocation = document.getElementById('timerDiv');
+  timerLocation.removeChild(timerLocation.firstChild);
 }
 
 //rendering the canvas pad
@@ -239,7 +229,7 @@ function playSound() {
 }
 playSound();
 
-//Drawing Function ==========================================================
+//Draw Functions ==========================================================
 
 var canvas,ctx;
 var mouseX, mouseY, mouseDown = 0;
@@ -267,9 +257,6 @@ function drawLine(ctx,x,y,size) {
 }
 
 function clearCanvas(canvas,ctx) {
-  console.log('In function');
-  console.log(canvas);
-  console.log(ctx);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -352,4 +339,4 @@ function init() {
   }
 }
 
-window.onload = startGame(); 
+window.onload = startGame();
