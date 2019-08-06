@@ -32,13 +32,10 @@ body {
 header{
 	background: #17223b;
 	border-radius: 15px;
-	height:auto;
-	min-height: 130px;
-	margin: 10px auto;
+	height: 75px;
 	padding: 20px;
 	width: 95%;
-	margin-left:auto;
-	margin-right:auto;
+  margin: 10px auto;
 	position:relative;
 }
 
@@ -46,12 +43,10 @@ header.fish h1 {
 	line-height: 75%;
 	padding: 20px;
 	color: #fff8f0;
-	top: 20%;
-	font-size: 60px;
+	font-size: 2.6rem;
 	font-family: 'Lost Fish', cursive;
 	text-align: center;
 	vertical-align: middle;
-  margin-top: 20px;
   letter-spacing: 2rem;
 }
 
@@ -61,13 +56,6 @@ header.fish h1 {
 
 #rightDiv {
 	float:right;
-}
-
-header.fish img {
-	display: block;
-	width: 150px;
-	height: 150px;
-	top: 15px;
 }
 
 canvas {
@@ -97,7 +85,7 @@ a {
   z-index: 100;
   float: left;
   width: 20%;
-  margin-left: 300px;
+  margin-left: 6%;
   margin-top: 30px;
 }
 
@@ -174,14 +162,13 @@ a {
   float: right;
   text-align: center;
   width: 300px;
-  margin-right: 22%;
 }
 
 #right-col-sketch {
   float: right;
   text-align: center;
   width: 300px;
-  margin-right: 20%;
+  margin-right: 8%;
 }
 
 
@@ -291,34 +278,19 @@ p {
   position:relative;
 }
 
-footer {
-  margin-top: 30px;
-	position:relative;
-	text-align: center;
-  color:white;
-  font-size: 2rem;
-}
-
 #about {
-  margin-top: 120px;
   font-family: "Lost Fish";
-}
-
-#about a:link,
-a:visited {
-	background-color: #17223b;
-	color: white;
-	min-height: 25px;
-	margin-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	font-size: 25px;
-	padding: 14px 25px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
+  background-color: #17223b;
   border-radius: 15px;
   width: 90%;
+  margin: 30px auto 30px auto;
+  padding: 15px;
+  
+}
 
+#about a {
+	color: #FFF8F0;
+  font-size: 1.6rem;
+  letter-spacing: .7rem;
+  text-decoration: none;
 }
